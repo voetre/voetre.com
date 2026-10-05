@@ -1,0 +1,137 @@
+{
+  "generated": "2026-10-05T04:23:40.752Z",
+  "categories": [
+    {
+      "name": "Old Photos",
+      "title": "Old Photos",
+      "count": 3,
+      "cover": "files/Old%20Photos/thumbnail.jpg",
+      "photos": [
+        {
+          "name": "hiroshima",
+          "full": "files/Old%20Photos/hiroshima.jpg",
+          "display": "files/Old%20Photos/hiroshima_small.jpg",
+          "thumb": "files/Old%20Photos/hiroshima_thumb.jpg"
+        },
+        {
+          "name": "Yamaguchi",
+          "full": "files/Old%20Photos/Yamaguchi.jpg",
+          "display": "files/Old%20Photos/Yamaguchi_small.jpg",
+          "thumb": "files/Old%20Photos/Yamaguchi_thumb.jpg"
+        },
+        {
+          "name": "kyushu",
+          "full": "files/Old%20Photos/kyushu.jpg",
+          "display": "files/Old%20Photos/kyushu_small.jpg",
+          "thumb": "files/Old%20Photos/kyushu_thumb.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Samsung Note 9",
+      "title": "Samsung Note 9",
+      "count": 12,
+      "cover": "files/Samsung%20Note%209/thumbnail.jpg",
+      "photos": [
+        {
+          "name": "hiroshima",
+          "full": "files/Samsung%20Note%209/hiroshima.jpg",
+          "display": "files/Samsung%20Note%209/hiroshima_small.jpg",
+          "thumb": "files/Samsung%20Note%209/hiroshima_thumb.jpg"
+        },
+        {
+          "name": "Yamaguchi",
+          "full": "files/Samsung%20Note%209/Yamaguchi.jpg",
+          "display": "files/Samsung%20Note%209/Yamaguchi_small.jpg",
+          "thumb": "files/Samsung%20Note%209/Yamaguchi_thumb.jpg"
+        },
+        {
+          "name": "kyushu",
+          "full": "files/Samsung%20Note%209/kyushu.jpg",
+          "display": "files/Samsung%20Note%209/kyushu_small.jpg",
+          "thumb": "files/Samsung%20Note%209/kyushu_thumb.jpg"
+        },
+        {
+          "name": "20251207_123907",
+          "full": "files/Samsung%20Note%209/20251207_123907.jpg",
+          "display": "files/Samsung%20Note%209/20251207_123907_small.jpg",
+          "thumb": "files/Samsung%20Note%209/20251207_123907_thumb.jpg"
+        },
+        {
+          "name": "Fugu Statue",
+          "full": "files/Samsung%20Note%209/Fugu%20Statue.jpg",
+          "display": "files/Samsung%20Note%209/Fugu%20Statue_small.jpg",
+          "thumb": "files/Samsung%20Note%209/Fugu%20Statue_thumb.jpg"
+        },
+        {
+          "name": "Kozan ji Butsuden",
+          "full": "files/Samsung%20Note%209/Kozan-ji%20Butsuden.jpg",
+          "display": "files/Samsung%20Note%209/Kozan-ji%20Butsuden_small.jpg",
+          "thumb": "files/Samsung%20Note%209/Kozan-ji%20Butsuden_thumb.jpg"
+        },
+        {
+          "name": "Bird",
+          "full": "files/Samsung%20Note%209/Bird.jpg",
+          "display": "files/Samsung%20Note%209/Bird_small.jpg",
+          "thumb": "files/Samsung%20Note%209/Bird_thumb.jpg"
+        },
+        {
+          "name": "Fugu Post",
+          "full": "files/Samsung%20Note%209/Fugu%20Post.jpg",
+          "display": "files/Samsung%20Note%209/Fugu%20Post_small.jpg",
+          "thumb": "files/Samsung%20Note%209/Fugu%20Post_thumb.jpg"
+        },
+        {
+          "name": "Kozan ji Butsuden2",
+          "full": "files/Samsung%20Note%209/Kozan-ji%20Butsuden2.jpg",
+          "display": "files/Samsung%20Note%209/Kozan-ji%20Butsuden2_small.jpg",
+          "thumb": "files/Samsung%20Note%209/Kozan-ji%20Butsuden2_thumb.jpg"
+        },
+        {
+          "name": "Kozan ji Butsuden4",
+          "full": "files/Samsung%20Note%209/Kozan-ji%20Butsuden4.jpg",
+          "display": "files/Samsung%20Note%209/Kozan-ji%20Butsuden4_small.jpg",
+          "thumb": "files/Samsung%20Note%209/Kozan-ji%20Butsuden4_thumb.jpg"
+        },
+        {
+          "name": "Kozan ji Butsuden5",
+          "full": "files/Samsung%20Note%209/Kozan-ji%20Butsuden5.jpg",
+          "display": "files/Samsung%20Note%209/Kozan-ji%20Butsuden5_small.jpg",
+          "thumb": "files/Samsung%20Note%209/Kozan-ji%20Butsuden5_thumb.jpg"
+        },
+        {
+          "name": "Shimonoseki Old Road",
+          "full": "files/Samsung%20Note%209/Shimonoseki%20Old%20Road.jpg",
+          "display": "files/Samsung%20Note%209/Shimonoseki%20Old%20Road_small.jpg",
+          "thumb": "files/Samsung%20Note%209/Shimonoseki%20Old%20Road_thumb.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Test Images",
+      "title": "Test Images",
+      "count": 3,
+      "cover": "files/Test%20Images/thumbnail.jpg",
+      "photos": [
+        {
+          "name": "kyushu",
+          "full": "files/Test%20Images/kyushu.jpg",
+          "display": "files/Test%20Images/kyushu_small.jpg",
+          "thumb": "files/Test%20Images/kyushu_thumb.jpg"
+        },
+        {
+          "name": "Hiroshima",
+          "full": "files/Test%20Images/Hiroshima.jpg",
+          "display": "files/Test%20Images/Hiroshima_small.jpg",
+          "thumb": "files/Test%20Images/Hiroshima_thumb.jpg"
+        },
+        {
+          "name": "Yamaguchi",
+          "full": "files/Test%20Images/Yamaguchi.jpg",
+          "display": "files/Test%20Images/Yamaguchi_small.jpg",
+          "thumb": "files/Test%20Images/Yamaguchi_thumb.jpg"
+        }
+      ]
+    }
+  ]
+}

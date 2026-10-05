@@ -1,0 +1,176 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10pt;
+    color: white; /* Set the text color to white */
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+    font-family: "Tahoma";
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Add black outline */
+}
+
+body, html {
+    text-align: center;
+    background-color: transparent;
+}
+
+body {
+    margin: 0;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-image: url("#");
+}
+
+h1 {
+    padding-top: 10px;
+    font-size: x-large;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 550px;
+    min-width: 550px;
+    margin: 0 auto;
+    background: transparent;
+    color: #6e45ff;
+    overflow: hidden;
+}
+
+.data * {
+    font-size: 7pt;
+    margin: 2px 0px;
+}
+
+.meta {
+    background: transparent;
+    border-bottom: 1px solid #C0C0C0;
+    padding: 4px;
+    display: flex;
+    gap: 5px;
+}
+
+.message p {
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+}
+
+.meta-keys p {
+    font-weight: bold;
+}
+
+.message {
+    outline: 1px solid #ffffff;
+}
+
+.message {
+    width: 490px;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.message-content {
+    background: transparent;
+    padding: 5px;
+}
+
+.messages {
+    margin-top: 25px;
+}
+
+.postnew {
+    margin-bottom: 15px;
+}
+
+form {
+    text-align: left;
+    width: 320px;
+    margin: 0;
+}
+
+.form {
+    width: 490px;
+    padding: 15px;
+    margin: 0 auto;
+    border: 1px solid #ffffff;
+}
+
+p.heading {
+    font-size: 13pt;
+    font-weight: bold;
+    width: fit-content;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.back {
+  display: none;
+}
+
+
+.meta a {
+    width: 240px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    word-wrap: normal;
+}
+
+textarea {
+    resize: none;
+}
+
+label {
+    width: 70px;
+    display: inline-block;
+    margin-top: 2px;
+    line-height: 18px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input[type="text"], textarea {
+    width: 240px;
+}
+
+input[type="text"] {
+    height: 21px;
+    margin-bottom: 5px;
+}
+
+textarea {
+    height: 120px;
+}
+
+.poster-meta {
+    width: 70px;
+}
+
+.poster-inputs {
+    width: 240px;
+    display: inline-block;
+}
+
+.poster {
+    display: flex;
+}
+
+.buttons {
+    margin-top: 15px;
+    margin-left: 70px;
+}
+
+.no-messages {
+    margin-bottom: 25px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}

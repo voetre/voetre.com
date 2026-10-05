@@ -1,0 +1,325 @@
+@import "compass/reset";
+
+.html {
+    overflow: hidden;
+}
+
+body {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Video Background */
+/* ##################################################### */
+
+#videoContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#backgroundVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#backgroundVideo.loaded {
+  opacity: 1;
+}
+
+#backgroundVideo.fade-out {
+  opacity: 0 !important;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Video Background */
+/* ##################################################### */
+
+
+
+/* Website Content */
+/* ##################################################### */
+.content-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+
+
+/* Website Logo */
+/* ##################################################### */
+.banner-container {
+  text-align: center;
+  margin-bottom: 48px;
+  margin-right: 35px;
+  z-index: 1;
+}
+
+.banner-container img {
+  max-width: 65%;
+  display: block;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column; /* Change to column layout */
+  align-items: center; /* Center the buttons horizontally within the container */
+  gap: 10px; 
+}
+
+
+
+/* FFXI Style Buttons */
+/* ##################################################### */
+.ffxiButton {
+  display: inline-block;
+  width: 343px;
+  height: 48px;
+  background-image: url('UI/button.png');
+  background-size: cover;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: center;
+  line-height: 35px; /* Match button height for vertical centering */
+  font-family: Tahoma, sans-serif;
+  font-weight: bolder;
+  font-size: 25px; /* Adjust font size as needed */
+  color: #fff; /* Text color */
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Add black outline */
+  border: none; /* Remove default button border */
+  transition: background-image 0.2s ease-in-out; /* Smooth hover transition */
+  margin: 0 10px;
+  padding: 0; /* Remove default padding */
+  line-height: 48px; /* Match button height for vertical centering */
+  z-index: 1;
+}
+
+.ffxiButton:hover {
+  background-image: url('UI/button_hover.png');
+}
+
+
+/* Guestbook */
+/* ##################################################### */
+.miniwindowDiv {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  border: 0px none;
+  background-image: url('UI/windowBg.png'); /* Set the background image */
+  background-size: cover; /* Ensure the image covers the entire area */
+  padding: 0px;
+  cursor: move;
+  z-index: 10;
+  width: 570px; /* Set the width of the guestbook div */
+  background-color: rgba(0,0,0,0.9); /* Only apply opacity to the background */
+  opacity: 0.9; /* Set the opacity to 90% */
+}
+
+.miniwindowDiv span {
+  color: white; /* Set the text color to white */
+  font-family: "Trykker", serif; /* Use a pixely style font */
+  position: relative;
+  top: 8px; /* Move the text 5px down from the top of the div */
+  left: 8px;
+  display: inline-block;
+  padding: 2px; /* Add some padding for better readability */
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Add black outline */
+  font-size: 12pt /* Increase font size by about 4pt */
+}
+
+.miniwindowTitle-bar {
+  background-image: url('UI/windowTitlebar.png'); /* Set the background image */
+  background-size: cover; /* Ensure the image covers the entire area */
+  height: 30px; /* Set the height of the title bar */
+  cursor: move;
+}
+
+.miniwindowContent {
+  padding: 0px;
+  border: 0px none;
+}
+
+.miniwindowClose-button {
+  float: right;
+  cursor: pointer;
+  margin-right: 8px;
+  background-color: rgba(255, 0, 0, 0.50);
+}
+
+.miniwindowContent iframe {
+  width: 570px;
+  height: 500px; /* Adjust height as needed */
+  border: 0px none;
+  background: transparent;
+  opacity: 1; /* Ensure iframe is fully opaque */
+}
+
+/* Remove background and opacity from images inside the iframe (if possible) */
+.miniwindowContent iframe img {
+  background: none !important;
+  opacity: 1 !important;
+}
+
+.miniwindowBottomBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 570px;
+  height: 5px;
+  background-image: url('UI/BottomBar.png'); /* Set the background image */
+  background-size: cover; /* Ensure the image covers the entire area */
+}
+
+/* Photography Window */
+/* ##################################################### */
+.photographyDiv {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  border: 0px none;
+  padding: 0px;
+  cursor: move;
+  z-index: 10;
+  width: 900px; /* Larger width */
+  height: 700px; /* Larger height */
+  opacity: 1; /* Set the opacity to 90% */
+}
+
+.photographyDiv.maximized {
+  position: fixed !important;
+  top: 1vh !important;
+  left: 1vw !important;
+  width: calc(100vw - 2vw) !important;
+  height: calc(100vh - 2vh) !important;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.photographyDiv::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('UI/windowBg.png');
+  background-size: cover;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.photographyDiv span {
+  color: white;
+  font-family: "Trykker", serif;
+  position: relative;
+  top: 8px;
+  left: 8px;
+  display: inline-block;
+  padding: 2px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-size: 12pt;
+}
+
+.photographyWindowControls span {
+  position: static;
+  top: auto;
+  left: auto;
+}
+
+.photographyTitle-bar {
+  background-image: url('images/photographywindowTitlebar.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30px;
+  cursor: move;
+}
+
+.photographyContent {
+  padding: 0px;
+  border: 0px none;
+}
+
+.photographyWindowControls {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  display: flex;
+  gap: 4px;
+}
+
+.photographyMaximize-button {
+  cursor: pointer;
+  background-color: rgba(0, 255, 0, 0.50);
+  order: 1;
+  padding: 0 8px;
+}
+
+.photographyMaximize-button::before {
+  content: "□";
+}
+
+.photographyDiv.maximized .photographyMaximize-button::before {
+  content: "❐";
+}
+
+.photographyClose-button {
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.50);
+  order: 2;
+  padding: 0 8px;
+}
+
+.photographyContent iframe {
+  width: 900px;
+  height: 630px;
+  border: 0px none;
+  background: transparent;
+  opacity: 1; /* Ensure iframe is fully opaque */
+}
+
+.photographyDiv.maximized .photographyContent iframe {
+  width: calc(98vw) !important;
+  height: calc(98vh - 30px) !important;
+  transition: all 0.3s ease;
+}
+
+/* Remove background and opacity from images inside the iframe (if possible) */
+.photographyContent iframe img {
+  background: none !important;
+  opacity: 1 !important;
+}
+
+.photographyBottomBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 900px;
+  height: 5px;
+  background-image: url('UI/BottomBar.png');
+  background-size: cover;
+}
+
+.photographyDiv.maximized .photographyBottomBar {
+  width: calc(100vw - 2vw) !important;
+  transition: all 0.3s ease;
+}

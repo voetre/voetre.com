@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>voetre.com</title>
+  <link href="https://fonts.googleapis.com/css2?family=Trykker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+  <div id="videoContainer">
+    <video id="backgroundVideo" autoplay loop muted playsinline></video>
+  </div>
+  <audio id="backgroundMusic" loop volume="0.1">
+    <source src="sounds/bgm.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="content-container">
+    <div class="banner-container">
+      <img src="UI/ffxi_banner.png" alt="FFXI Banner">
+    </div>
+
+    <div class="button-container">
+      <button id="photographyButton" class="ffxiButton">Photography</button>
+      <button id="guestbookButton" class="ffxiButton">Guest Book</button>
+      <button id="muteButton" class="ffxiButton">Play Music</button>
+    </div>
+    
+    <div id="guestbook" class="miniwindowDiv" style="display: none;">
+        <div class="miniwindowTitle-bar">
+        <span class="miniwindowTitle">Guestbook</span>
+        <span class="miniwindowClose-button">&nbsp;X&nbsp;</span>
+        </div>
+        <div class="miniwindowContent">
+            <iframe id="miniwindow-iFrame" src="https://clue.oomfie.club/guestbook/voetre"></iframe>
+        </div>
+        
+        <div class="miniwindowBottomBar">
+        </div>
+    </div>
+
+    <div id="photographyDiv" class="photographyDiv" style="display: none;">
+        <div class="photographyTitle-bar">
+        <span class="photographyTitle">Photography</span>
+        <div class="photographyWindowControls">
+            <span class="photographyMaximize-button"></span>
+            <span class="photographyClose-button">&nbsp;X&nbsp;</span>
+        </div>
+        </div>
+        <div class="photographyContent">
+            <iframe id="photography-iFrame" src="gallery/index.html"></iframe>
+        </div>
+        
+        <div class="photographyBottomBar">
+        </div>
+    </div>
+    
+  </div>
+  <script src="script.js"></script> </body>
+</html>

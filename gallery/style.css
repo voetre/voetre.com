@@ -1,0 +1,218 @@
+/* Photo Gallery — static build for GitHub Pages.
+   Visual language carried over from the original Free PHP Gallery
+   (Trykker pixel font, blue liquid buttons, grey photo borders). */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: transparent;
+  color: #EEE;
+  font-family: "Trykker", Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  text-shadow: -1px -1px #333;
+}
+
+a:link, a:visited { color: #11a2e4; }
+a:hover { color: #6fd0ff; }
+
+.gallery_wrapper {
+  max-width: 756px;
+  margin: 0 auto;
+  padding: 10px;
+  line-height: 1.7em;
+}
+
+.breadcrumb {
+  color: #999;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1.4em;
+  margin: 0 0 20px;
+}
+.breadcrumb a:link, .breadcrumb a:visited { color: #999; }
+.breadcrumb a:hover { color: #333; }
+
+/* --- category index ---------------------------------------------------- */
+
+.category_thumbnail_span {
+  display: inline-block;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #CCC;
+  margin: 5px 5px 5px 0;
+  overflow: hidden;
+}
+.category_thumbnail_span img { border: 0; display: block; }
+
+a.category_thumbnail_image {
+  display: inline-block;
+  width: 160px;
+  height: 100px;
+  background: url(layout/lens_48x48.png) no-repeat center center;
+}
+a.category_thumbnail_title {
+  display: inline-block;
+  padding-top: 4px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+/* --- photo grid -------------------------------------------------------- */
+
+.photo_grid { margin-top: 10px; }
+
+.photo_thumb {
+  padding: 5px;
+  border: 1px solid #CCC;
+  margin: 5px 5px 0 0;
+  cursor: pointer;
+  display: block;
+}
+.photo_thumb:hover, .photo_thumb:focus-visible {
+  border-color: #0099FF;
+  outline: none;
+}
+
+.empty {
+  color: #999;
+  font-size: 14px;
+}
+
+.message_error {
+  padding: 6px 10px;
+  background-color: #CE0000;
+  border: 1px solid #990000;
+  color: #FFF;
+  margin: 0;
+}
+
+/* --- liquid buttons ---------------------------------------------------- */
+
+a.liquid_button {
+  color: #FFF;
+  text-decoration: none;
+  text-align: center;
+  background-color: #07aaff;
+  border: 1px solid #0b7fde;
+  padding: 5px 10px;
+  display: inline-block;
+  background: url(layout/liquid_button.gif) no-repeat;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+}
+a.liquid_button:hover { background-position: 0 -50px; }
+
+/* --- lightbox ---------------------------------------------------------- */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+}
+.lightbox[hidden] { display: none; }
+
+.lightbox_stage {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 44px 52px 4px;
+}
+
+.lightbox_figure {
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+#lightbox_image {
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  padding: 5px;
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, .6);
+}
+
+.lightbox_caption {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 3px 12px;
+  font-size: 14px;
+  line-height: 1.2;
+  text-transform: capitalize;
+  color: #FFF;
+  background: url(layout/transparent_bg.png) no-repeat 12px 0;
+  text-shadow: -1px -1px #555;
+}
+.lightbox_counter { color: #9EC9E4; }
+.lightbox_caption a { color: #FFF; text-decoration: underline; white-space: nowrap; }
+.lightbox_caption a:hover { color: #6fd0ff; }
+
+.lightbox_nav, .lightbox_close {
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  color: #FFF;
+  background: rgba(40, 40, 40, .55) no-repeat center;
+  font-family: "Trykker", Tahoma, Arial, sans-serif;
+  line-height: 1;
+}
+.lightbox_nav:hover, .lightbox_close:hover { background-color: #07aaff; }
+
+.lightbox_close {
+  top: 8px; right: 8px;
+  width: 30px; height: 30px;
+  background-image: url(layout/cancel_button_30.gif);
+}
+.lightbox_prev, .lightbox_next {
+  top: 50%;
+  margin-top: -22px;
+  width: 44px; height: 44px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+.lightbox_prev { left: 6px; }
+.lightbox_next { right: 6px; }
+
+.lightbox_strip {
+  flex: 0 0 auto;
+  height: 62px;
+  padding: 5px;
+  background-color: #282828;
+  border-top: 1px solid #555;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.lightbox_strip img {
+  display: inline-block;
+  vertical-align: top;
+  width: 80px;
+  height: 50px;
+  margin-right: 10px;
+  border: 5px solid #282828;
+  cursor: pointer;
+}
+.lightbox_strip img.is-active { border-color: #0099FF; }
+
+@media (max-width: 640px) {
+  .lightbox_stage { padding: 40px 12px 4px; }
+  .lightbox_caption { flex-wrap: wrap; justify-content: center; gap: 4px 12px; }
+}

@@ -1,0 +1,13 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# Never commit the ACME challenge dir from the cPanel host
+.well-known/
+
+# Local scratch
+*.log

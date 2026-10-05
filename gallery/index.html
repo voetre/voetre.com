@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Photo Gallery</title>
+<meta name="description" content="Photo Gallery">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Trykker&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+
+<div class="gallery_wrapper">
+  <p class="breadcrumb" id="breadcrumb"></p>
+  <div id="content" role="main"></div>
+</div>
+
+<div id="lightbox" class="lightbox" hidden>
+  <div class="lightbox_stage" id="lightbox_stage">
+    <button type="button" class="lightbox_close" id="lightbox_close" title="Close (Esc)" aria-label="Close">&nbsp;X&nbsp;</button>
+
+    <button type="button" class="lightbox_nav lightbox_prev" id="lightbox_prev" title="Previous photo (&larr;)" aria-label="Previous photo">&#9664;</button>
+
+    <figure class="lightbox_figure">
+      <img id="lightbox_image" alt="">
+      <figcaption class="lightbox_caption">
+        <span id="lightbox_title"></span>
+        <span class="lightbox_counter" id="lightbox_counter"></span>
+        <a id="lightbox_fullsize" href="#" target="_blank" rel="noopener">Full size</a>
+      </figcaption>
+    </figure>
+
+    <button type="button" class="lightbox_nav lightbox_next" id="lightbox_next" title="Next photo (&rarr;)" aria-label="Next photo">&#9654;</button>
+  </div>
+  <div class="lightbox_strip" id="lightbox_strip"></div>
+</div>
+
+<noscript>
+  <p class="message_error" style="margin:10px">This gallery needs JavaScript enabled.</p>
+</noscript>
+
+<script src="gallery.js"></script>
+</body>
+</html>
